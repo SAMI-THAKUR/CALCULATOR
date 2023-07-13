@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://api.fontshare.com/v2/css?f[]=nippo@400&f[]=kola@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://kit.fontawesome.com/1c61aef8ab.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<style>
+    button{
+        box-shadow: 0px 0px 1px 1px #526D82
+    }
+    button:active{
+        box-shadow: 0px 0px 3px #526D82 inset;
+        transform: scale(0.9);
+        transistion: all 0.2s ease-in-out;
+    }
+    button:hover{
+        box-shadow:0px 0px 3px 2px #0d1117 inset; ;
+    }
+    span{
+        display: none;
+    }
+</style>
+<body >
+    <main class="grid h-[100vh] bg-[#fdfdfb] dark:bg-[#0d1117]">
+       
+        <div class="body mx-auto mt-5 grid justify-around w-[100vh]">        
+<div class="relative mx-auto border-gray-800 dark:border-[#526D82] bg-[#526D82] border-[14px] rounded-[2.5rem] h-[600px] w-[300px] shadow-xl">
+    <div class="w-[148px] h-[18px] bg-gray-800 dark:bg-[#526D82] top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute z-20"></div>
+    <div class="h-[46px] w-[3px] bg-gray-400 absolute -left-[17px] top-[124px] rounded-l-lg"></div>
+    <div class="h-[46px] w-[3px] bg-gray-400 absolute -left-[17px] top-[178px] rounded-l-lg"></div>
+    <div class="h-[64px] w-[3px] bg-gray-400 absolute -right-[17px] top-[142px] rounded-r-lg"></div>
+    <div class="rounded-[2rem] overflow-hidden w-[272px] h-[572px] bg-[#f8f1e5] dark:bg-[#333333]">  
+            <div class="name my-6 mb-3 mx-5 text-[19px] tracking-widest text-[#1565c0] dark:text-[#0fffff] font-extrabold flex justify-evenly" style="font-family: 'Nippo', sans-serif;">
+                CASIO
+                <button id="theme-toggle" type="button" class="text-[#1565c0] dark:text-[#0fffff] hover:text-[#edeff1] dark:hover:text-[#333333] hover:bg-[#1565c0] dark:hover:bg-[#0fffff] focus:outline-none  focus:ring-[#0fffff] dark:focus:ring-[#0fffff] rounded-lg text-sm p-2 w-fit">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                </button>
+            </div> 
+            <div class="display w-[249px] h-[120px] bg-[#aea9a9] dark:bg-[#edeff1]  mx-auto rounded-md " id="display" style="font-family: 'Nippo', sans-serif;">
+                <div class="operation w-[249px] h-[60px] pt-3 pl-5 text-[20px] text-[#333333] dark:text-[#526D82] font-medium" id="operation"></div>
+                <div class="result w-[249px] h-[60px] tracking-wider  pt-0 pl-5  text-[25px] font-extrabold text-[#0d1117] dark:text-[#28A745]" id="result"></div>
+            </div>
+            <div class="buttons w-[249px] h-[330px]  mx-auto mt-[25px]" id="buttons" style="font-family: 'Kola', sans-serif">
+               <div class="row flex flex-wrap justify-between py-2 px-1">
+                 <button class="w-[50px] h-[50px] rounded-lg text-xl text-[#f8f1e5] bg-[#1565c0] dark:bg-[#0fffff] dark:text-[#333333] font-bold">AC<span>c</span></button>
+                 <button type="button" class="w-[50px] h-[50px]  rounded-lg text-[#f8f1e5] text-xl bg-[#1565c0] dark:bg-[#0fffff]"><i class="fa-solid fa-delete-left dark:text-[#333333]"><span>d</span></i></button>
+                 <button class="w-[50px] h-[50px]  rounded-lg text-xl text-[#f8f1e5] bg-[#1565c0] dark:bg-[#0fffff]"><i class="fa-solid fa-percent  dark:text-[#333333]"><span>/100</span></i></button>
+                 <button class="w-[50px] h-[50px]  rounded-lg text-xl text-[#f8f1e5] bg-[#1565c0] dark:bg-[#0fffff]" data-key="/"><i class="fa-solid fa-divide dark:text-[#333333]"><span>/</span></i></button>
+               </div> 
+               <div class="row flex justify-between py-2 px-1">
+                <button class="w-[50px] h-[50px] rounded-lg text-2xl bg-[#d9d9d9] dark:bg-[#494947] dark:text-[#edeff1] font-bold">7<span>7</span></button>
+                <button class="w-[50px] h-[50px]  rounded-lg text-2xl bg-[#d9d9d9] dark:bg-[#494947] dark:text-[#edeff1] font-bold">8<span>8</span></button>
+                <button class="w-[50px] h-[50px]  rounded-lg text-2xl bg-[#d9d9d9] dark:bg-[#494947] dark:text-[#edeff1] font-bold">9<span>9</span></button>
+                <button class="w-[50px] h-[50px]  rounded-lg text-2xl text-[#f8f1e5]  bg-[#1565c0] dark:bg-[#0fffff] dark:text-[#333333] "><i class="fa-solid fa-xmark"><span>*</span></i></button>
+              </div> 
+              <div class="row flex justify-between py-2 px-1">
+                <button class="w-[50px] h-[50px] rounded-lg text-2xl bg-[#d9d9d9] dark:bg-[#494947] dark:text-[#edeff1] font-bold">4<span>4</span></button>
+                <button class="w-[50px] h-[50px]  rounded-lg text-2xl bg-[#d9d9d9] dark:bg-[#494947] dark:text-[#edeff1] dark:font-bold">5<span>5</span></button>
+                <button class="w-[50px] h-[50px]  rounded-lg text-2xl bg-[#d9d9d9] dark:bg-[#494947] dark:text-[#edeff1] dark:font-bold">6<span>6</span></button>
+                <button class="w-[50px] h-[50px]  rounded-lg text-xl text-[#f8f1e5] bg-[#1565c0] dark:bg-[#0fffff] dark:text-[#333333] "><i class="fa-solid fa-minus"><span>-</span></i></button>
+              </div>
+              <div class="row flex justify-between py-2 px-1">
+                <button class="w-[50px] h-[50px] rounded-lg text-2xl bg-[#d9d9d9] dark:bg-[#494947] dark:text-[#edeff1] font-bold">1<span>1</span></button>
+                <button class="w-[50px] h-[50px]  rounded-lg text-2xl bg-[#d9d9d9] dark:bg-[#494947] dark:text-[#edeff1] font-bold">2<span>2</span></button>
+                <button class="w-[50px] h-[50px]  rounded-lg text-2xl bg-[#d9d9d9] dark:bg-[#494947] dark:text-[#edeff1] font-bold">3<span>3</span></button>
+                <button class="w-[50px] h-[50px]  rounded-lg text-xl text-[#f8f1e5] bg-[#1565c0] dark:bg-[#0fffff] dark:text-[#333333]"><i class="fa-solid fa-plus"><span>+</span></i></button>
+              </div>
+              <div class="row flex justify-start py-2 px-1">
+                <button  class="w-[50px] h-[50px] mr-4 rounded-lg text-2xl bg-[#d9d9d9] dark:bg-[#494947] dark:text-[#edeff1] font-bold">0<span>0</span></button>
+                <button class="w-[50px] h-[50px] mr-4  rounded-lg text-xl bg-[#d9d9d9]  dark:bg-[#494947] dark:text-[#edeff1] font-bold">.<span>.</span></button>
+                <button class="w-[110px] h-[50px]  rounded-lg text-xl text-[#f8f1e5] bg-[#1565c0] dark:bg-[#0fffff] dark:text-[#333333] font-bold"><i class="fa-solid fa-equals"><span>=</span></i></button>
+              </div>
+            </div>  
+    </div>
+</div>
+     </div>
+     <div class="credit mx-auto text-[#ff6000] dark:text-[#FFd700] font-mono text-3xl -mt-6">DESIGN & DEVELOPED BY &lt;/SAMI&gt;</div>
+    </main>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
