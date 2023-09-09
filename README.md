@@ -16,9 +16,12 @@ You can try out the calculator by visiting the [live demo](https://sami-thakur.g
 
 ## Technologies Used
 
-- HTML
-- JavaScript
-- Tailwind CSS
+<div align="left">
+  <img src="https://img.shields.io/badge/HTML-5E5E5E?style=for-the-badge&logo=html5&logoColor=E34F26" alt="HTML">
+  <img src="https://img.shields.io/badge/CSS-5E5E5E?style=for-the-badge&logo=css3&logoColor=1572B6" alt="CSS">
+  <img src="https://img.shields.io/badge/JavaScript-5E5E5E?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="JavaScript">
+  <img src="https://img.shields.io/badge/Tailwind%20CSS-5E5E5E?style=for-the-badge&logo=tailwind-css&logoColor=38B2AC" alt="Tailwind CSS">
+</div>
 
 ## Installation
 
